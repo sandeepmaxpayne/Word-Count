@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <h1>There are total {{ count }} words in count</h1>
+
+    <a href="{% url 'home' %}">Start Again</a>
+
+</head>
+<body>
+<h1>Your Text Entered As:</h1>
+<h3>{{ fulltext }}</h3>
+<br>
+<h2>Words Repeated :</h2>
+{% for words, counttotal in wordDictionery%}
+    <br>
+    {{ words }} - {{ counttotal }}
+{% endfor %}
+</body>
+</html>
